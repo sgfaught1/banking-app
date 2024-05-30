@@ -2,6 +2,7 @@ import HeaderBox from '@/components/HeaderBox'
 import RightSidebar from '@/components/RightSidebar'
 import TotalBalanceBox from '@/components/TotalBalanceBox'
 import React from 'react'
+import RecentTransactions from '@/components/RecentTransactions'
 
 const Home = () => {
 const loggedIn = {firstName: 'Spencer', lastName: 'Coder', email: '1234@gmail.com'}
@@ -24,8 +25,7 @@ const loggedIn = {firstName: 'Spencer', lastName: 'Coder', email: '1234@gmail.co
           />
           
         </header>
-
-        recent transactions
+        <RecentTransactions />
       </div>
 
       <RightSidebar 
