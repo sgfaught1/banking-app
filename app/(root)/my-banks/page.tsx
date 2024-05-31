@@ -16,32 +16,39 @@ interface Bank {
 }
 
 // Initialize your data
-let user: User = { firstName: 'Spencer', lastName: 'Coder' };
+let user: User = { firstName: 'Spencer', lastName: 'Faught' };
 let transactions: any[] = [];
 let banks: Bank[] = [
-  { $id: '1', currentBalance: 123.50 },
-  { $id: '2', currentBalance: 502.68 },
+  { $id: '1', currentBalance: 12500.35 },
+  { $id: '2', currentBalance: 25000.00 },
 ];
 
 const MyBanks = () => {
   return (
     <div>
-      <HeaderBox 
-          type = "greeting" 
-          title= "Welcome"
-          user = {user.firstName || "Guest"}
-          subtext = "View your different cards here!"
-          />
+      
+      <div className='transactions'>
+            <HeaderBox 
+                     type = "greeting" 
+                     title= "Welcome"
+                     user = {user.firstName || "Guest"}
+                     subtext = "View your different cards here!"
+                     />
+      </div>
+      
       {banks?.length > 0 && (
         <div className='relative flex flex-1 flex-col justify-center gap-5'>
-          <div className='relative left-5 top-30 z-0 w-full'>
+        
+          <div className='relative left-5 top-30 z-0 w-full'> 
             <BankCard
               key={banks[0].$id}
               account={banks[0]}
               userName={`${user.firstName} ${user.lastName}`}
               showBalance={false}
+              lastFour = '1234'
             />
-          </div>
+           
+          </div> 
           {banks[1] && (
             <div className='relative left-5 top-30 z-0 w-full'>
               <BankCard
@@ -49,6 +56,7 @@ const MyBanks = () => {
                 account={banks[1]}
                 userName={`${user.firstName} ${user.lastName}`}
                 showBalance={false}
+                lastFour = '5678'
               />
             </div>
           )}

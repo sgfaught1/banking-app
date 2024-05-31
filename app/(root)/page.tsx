@@ -5,7 +5,7 @@ import React from 'react'
 import RecentTransactions from '@/components/RecentTransactions'
 
 const Home = () => {
-const loggedIn = {firstName: 'Spencer', lastName: 'Coder', email: '1234@gmail.com'}
+const loggedIn = {firstName: 'Spencer', lastName: 'Faught', email: 'demo@gmail.com'}
 
   return (
     <section className='home'>
@@ -20,8 +20,8 @@ const loggedIn = {firstName: 'Spencer', lastName: 'Coder', email: '1234@gmail.co
 
           <TotalBalanceBox 
           accounts = {[]}
-          totalBanks = {1}
-          totalCurrentBalance = {1250.35}
+          totalBanks = {2}
+          totalCurrentBalance = {37500.35}
           />
           
         </header>
@@ -31,7 +31,7 @@ const loggedIn = {firstName: 'Spencer', lastName: 'Coder', email: '1234@gmail.co
       <RightSidebar 
       user = {loggedIn}
       transactions = {[]}
-      banks={[{currentBalance: 123.50}, {currentBalance: 502.68}]}/>
+      banks={[{currentBalance: 12500.35}, {currentBalance: 25000.00}]}/>
 
     </section>
   )

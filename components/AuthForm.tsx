@@ -65,6 +65,7 @@ const formSchema = authFormSchema(type);
             })
             if(response) router.push('/')
         }
+        
     }
     catch (error) {
         console.log(error)
@@ -181,15 +182,19 @@ const formSchema = authFormSchema(type);
                             placeholder='Enter your password'
                         />              
         <div className='flex flex-col gap-4'>
-            <Button className='form-btn' type="submit" disabled = {isLoading}>
+            <Link href = '/' className='w-full'>
+             <Button className='form-btn w-full' type="submit" disabled = {isLoading}>
+                
                 {isLoading ? (
                     <>
                         <Loader2 size={20} className='animate-spin'/> &nbsp;
                         Loading...
                     </>
                 ): type ==='sign-in' 
-                ? 'Sign In' : 'Sign Up' }
-            </Button>
+                ? 'Sign In' : 'Sign Up'}
+                
+                </Button>
+            </Link>
         </div>
       </form>
     </Form>
@@ -203,7 +208,9 @@ const formSchema = authFormSchema(type);
             {type === 'sign-in' ? 'Sign up'
         : 'Sign in'}
         </Link>
+       
     </footer>
+     <p style={{color: 'gray'}}>*All fields optional for demo purposes</p>
             </>
         ) 
         }
