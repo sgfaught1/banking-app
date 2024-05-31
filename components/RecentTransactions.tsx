@@ -3,6 +3,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import Link from 'next/link'
 
+import RecentTransactionsTable from './RecentTransactionsTable'
+import RecentTransactionsTableSavings from './RecentTransactionsTableSavings'
+
 const RecentTransactions = () => {
   return (
     <section className='recent-transactions'>
@@ -12,14 +15,22 @@ const RecentTransactions = () => {
                 View All
             </Link>
         </header>
-        <Tabs defaultValue="account" className="w-full">
+        <Tabs defaultValue="checkings" className="w-full">
             <TabsList className='recent-transactions-tablist'>
-                <TabsTrigger value="account">Checking</TabsTrigger>
-                <TabsTrigger value="password">Savings</TabsTrigger>
+                <TabsTrigger value="checkings" >Checkings</TabsTrigger>
+                <TabsTrigger value="savings">Savings</TabsTrigger>
             </TabsList>
-            <TabsContent value="account">Make changes to your account here.</TabsContent>
-            <TabsContent value="password">Change your password here.</TabsContent>
+            <TabsContent value="checkings">
+                Your recent Checkings account history:
+                <RecentTransactionsTable />
+            </TabsContent>
+            <TabsContent value="savings">
+                Your recent Savings history:
+                <RecentTransactionsTableSavings />
+                </TabsContent>
         </Tabs>
+
+        
 
     </section>
   )
