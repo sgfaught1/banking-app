@@ -51,7 +51,7 @@ const Sidebar = ({user}: SiderbarProps) => {
             USER
         </nav>
         Log Out Below
-        <Footer />
+       {/* <Footer /> */}
     </section>
   )
 }
