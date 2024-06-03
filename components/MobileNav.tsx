@@ -14,6 +14,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import Footer from "./Footer"
   
 
 const MobileNav = ({user}: MobileNavProps) => {
@@ -75,7 +76,21 @@ const MobileNav = ({user}: MobileNavProps) => {
                     </nav>
                 </SheetClose>
 
-                FOOTER
+                <Footer user={{
+              $id: "",
+              email: "",
+              userId: "",
+              dwollaCustomerUrl: "",
+              dwollaCustomerId: "",
+              firstName: "",
+              lastName: "",
+              address1: "",
+              city: "",
+              state: "",
+              postalCode: "",
+              dateOfBirth: "",
+              ssn: ""
+            }} />
             </div>
             
   </SheetContent>

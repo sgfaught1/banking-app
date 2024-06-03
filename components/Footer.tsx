@@ -14,8 +14,9 @@ const Footer = ({ user, type = 'desktop' }: FooterProps) => {
     const router = useRouter();
 
     return (
-
+<div><div><p style={{color: '#0179fe'}}>Log Out Below</p></div>
         <footer className="footer">
+            
 
             <div className={type === 'mobile' ? 'footer_name-mobile' : 'footer_name'}>
 
@@ -58,6 +59,7 @@ const Footer = ({ user, type = 'desktop' }: FooterProps) => {
             </div>
 
         </footer>
+        </div>
 
     )
 
